@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Size</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tires.each do |tire| %>
+      <tr>
+        <td><%= tire.make %></td>
+        <td><%= tire.model %></td>
+        <td><%= tire.size %></td>
+        <td><%= tire.description %></td>
+        <td><%= link_to 'Show', tire %></td>
+        <td><%= link_to 'Edit', edit_tire_path(tire) %></td>
+        <td><%= link_to 'Destroy', tire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tire', new_tire_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @tire.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tire.model %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @tire.size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tire.description %>
+</p>
+
+<%= link_to 'Edit', edit_tire_path(@tire) %> |
+<%= link_to 'Back', tires_path %>
